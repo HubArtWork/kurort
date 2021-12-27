@@ -1,0 +1,407 @@
+@import "vars"
+
+.main
+	padding-top: 117px
+	position: relative
+	&-top
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 277px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	.wrapper
+		position: relative
+		z-index: 10
+	&-title
+		display: block
+		font-size: 35px
+		line-height: 55px
+		font-weight: bold
+		color: #fff
+		text-transform: uppercase
+		margin: 0 0 12px
+		text-align: center
+	&-wrap
+		max-width: 1137px
+		margin: 0 auto
+		.tab-list
+			display: flex
+			flex-flow: row nowrap
+			margin: 0 -0.5px
+			text-align: center
+			li
+				width: 33.333%
+				padding: 0 0.5px
+				a
+					display: block
+					background: #160E44
+					border-radius: 7px 7px 0px 0px
+					font-size: 20px
+					line-height: 1.2
+					font-weight: 500
+					color: #fff
+					padding: 14px 10px 10px
+					&.active
+						background: #F8F8F8
+						color: #323232
+	&-block
+		min-height: 140px
+		background: #F8F8F8
+		padding: 30px 68px 40px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		padding-bottom: 25px
+		&:last-child
+			padding-bottom: 0
+	&-col
+		max-width: 427px
+		width: 100%
+		margin-left: -1px
+		input
+			display: block
+			width: 100%
+			height: 50px
+			border: 1px solid rgba(46, 46, 46, 0.2)
+			border-radius: 2px
+			background-color: #fff
+			padding: 17px 23px
+			font-size: 14px
+			line-height: 1
+			color: #3C3C3C
+			&.select2-search__field
+				height: auto
+		&-big
+			width: 100%
+			max-width: 537px
+		&-small
+			min-width: 233px
+			width: 233px
+	&-label
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		font-size: 16px
+		line-height: 1
+		margin-bottom: 10px
+		padding-left: 24px
+		position: relative
+		.hb-ico
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			min-width: 15px
+			width: 15px
+			height: 15px
+			margin-right: 7px
+		.nutrition-ico
+			min-width: 18px
+			width: 18px
+			height: 21px
+	&-buttons
+		padding: 26px 0 0 14px
+		.primary-btn,.second-btn
+			min-width: 135px
+	&-drop
+		position: relative
+		&-top
+			font-size: 14px
+			line-height: 1
+			color: #3C3C3C
+			padding: 17px 23px
+			background-color: #fff
+			border: 1px solid rgba(46, 46, 46, 0.2)
+			border-radius: 2px
+			cursor: pointer
+			position: relative
+		&-wrap
+			position: absolute
+			top: 100%
+			right: 0
+			width: 100%
+			border: 1px solid rgba(46, 46, 46, 0.2)
+			background-color: #fff
+			padding: 19px 24px
+			transition: $transition
+			opacity: 0
+			visibility: hidden
+			&-big
+				display: flex
+				flex-flow: row nowrap
+				min-width: 274px
+				padding: 16px 22px
+				.inputs
+					margin-right: 17px
+					&:last-child
+						margin-right: 0
+		&.active
+			z-index: 50
+			.main-drop-wrap
+				opacity: 1
+				visibility: visible
+
+.inputs
+	display: flex
+	flex-flow: row nowrap
+	align-items: center
+	padding: 5px 0
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+	&-label
+		display: block
+		font-size: 14px
+		line-height: 1
+		font-weight: normal
+		color: #323232
+		white-space: nowrap
+		margin-right: 12px
+		span
+			display: block
+			font-size: 10px
+			margin-top: 8px
+	&-plus,&-minus
+		display: block
+		cursor: pointer
+		border: 1px solid #D5D5D5
+		border-radius: 2px
+		width: 25px
+		height: 25px
+		text-align: center
+		font-size: 14px
+		line-height: 23px
+		font-weight: normal
+		color: #323232
+	&-num
+		display: block
+		min-width: 32px
+		font-size: 14px
+		line-height: 1
+		color: #323232
+		padding: 0 5px
+
+.select2-container
+	width: 100%!important
+.select2-results__option:before
+	box-sizing: border-box
+	content: ""
+	display: inline-block
+	position: relative
+	height: 15px
+	width: 15px
+	background: #E8E8E8
+	border-radius: 2px
+	margin-right: 10px
+	vertical-align: middle
+.select2-results__option[aria-selected=true]:before
+	background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='15' height='15' rx='2' fill='%230B7CC1'/%3E%3Cpath d='M10.3219 5C10.0841 5 9.86054 5.09267 9.69231 5.26094L6.39769 8.56093L5.51958 7.6829C5.35146 7.51475 5.12793 7.42211 4.89016 7.42211C4.65236 7.42211 4.42883 7.51475 4.26067 7.68286C4.09256 7.85098 4 8.07451 4 8.31228C4 8.55004 4.09256 8.77358 4.26067 8.94166L5.76839 10.4494C5.93651 10.6175 6.16004 10.7102 6.39784 10.7102C6.63553 10.7102 6.85914 10.6175 7.02745 10.4492L10.9514 6.51966C11.2984 6.17254 11.2983 5.60779 10.9514 5.26067C10.7833 5.09259 10.5597 5 10.3219 5Z' fill='white'/%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+.select2-results__option
+	padding-right: 20px
+	vertical-align: middl
+.select2-container--default .select2-results__option[aria-selected=true]
+	background-color: #fff
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background-color: #fff
+	color: #272727
+.select2-container .select2-selection--multiple
+	display: flex
+	align-items: center
+	background-color: #fff
+	border: 1px solid rgba(46, 46, 46, 0.2)
+	border-radius: 2px
+	min-height: 50px
+.select2-container--default.select2-container--focus .select2-selection--multiple
+	border-color: rgba(46, 46, 46, 0.2)
+.select2-container--default .select2-selection--multiple .select2-selection__rendered
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+	font-size: 14px
+	line-height: 1
+	color: rgba(34, 34, 34, 0.4)
+	padding: 7.5px 0
+	margin: 0
+	margin-left: 5px
+	.select2-selection__clear
+		display: none
+.select2-container .select2-search--inline .select2-search__field
+	margin: 0
+	font-size: 14px
+	line-height: 28px
+	color: rgba(34, 34, 34, 0.4)
+
+.select2-container .select2-search--inline .select2-search__field
+	padding: 0 23px
+
+.select2-dropdown
+	border: none
+
+.select2-results__options
+	padding: 12px 20px
+	border: 1px solid rgba(46, 46, 46, 0.2)
+	background-color: #fff
+	border-radius: 2px
+
+.select2-results__option
+	display: flex
+	align-items: center
+	font-family: $GraphikLCG
+	font-size: 14px
+	line-height: 1
+	color: #323232
+	padding: 5px 0
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	background: #E2E2E2
+	border-radius: 7px
+	padding: 8px 32px 8px 10px
+	font-size: 14px
+	line-height: 1
+	color: #323232
+	position: relative
+	border: none
+	margin-top: 2.5px
+	margin-bottom: 2.5px
+	.select2-selection__choice__remove
+		position: absolute
+		top: 50%
+		right: 10px
+		transform: translate(0,-50%)
+		width: 12px
+		height: 12px
+		color: transparent
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.50006 3.2075L8.79256 2.5L6.00006 5.2925L3.20756 2.5L2.50006 3.2075L5.29256 6L2.50006 8.7925L3.20756 9.5L6.00006 6.7075L8.79256 9.5L9.50006 8.7925L6.70756 6L9.50006 3.2075Z' fill='%23323232'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		margin: 0
+
+#select2-nutritionAndTreatment-results
+	.select2-results__option:before
+		border-radius: 50%
+	.select2-results__option[aria-selected=true]:before
+		background: #fff
+		border: 4px solid #0B7CC1
+
+.ui-widget.ui-widget-content
+	border: none
+	padding: 0
+
+.ui-widget-header
+	background-color: #fff
+	font-family: $GraphikLCG
+	font-size: 14px
+	line-height: 1
+	font-weight: 600
+	color: #323232
+	border: none
+
+.ui-datepicker .ui-datepicker-header
+	padding: 20px 0 5px
+
+.ui-datepicker-next,.ui-datepicker-prev
+	top: 18px!important
+	width: 26px!important
+	height: 26px!important
+	background: none!important
+	background-image: url("data:image/svg+xml,%3Csvg width='26' height='8' viewBox='0 0 26 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.3536 4.03553C25.5488 3.84027 25.5488 3.52369 25.3536 3.32843L22.1716 0.146446C21.9763 -0.0488155 21.6597 -0.0488155 21.4645 0.146446C21.2692 0.341708 21.2692 0.658291 21.4645 0.85355L24.2929 3.68198L21.4645 6.51041C21.2692 6.70567 21.2692 7.02225 21.4645 7.21751C21.6597 7.41278 21.9763 7.41278 22.1716 7.21751L25.3536 4.03553ZM0 4.18198L25 4.18198V3.18198L0 3.18198L0 4.18198Z' fill='%2358AA47'/%3E%3C/svg%3E%0A")!important
+	background-repeat: no-repeat!important
+	background-position: center!important
+	background-size: contain!important
+	border: none!important
+	margin: 0!important
+	span
+		display: none!important
+		background-color: none!important
+
+.ui-datepicker .ui-datepicker-prev
+	left: 16px
+	transform: rotate(180deg)
+.ui-datepicker .ui-datepicker-next
+	right: 16px
+
+.ui-datepicker th
+	font-size: 12px
+	line-height: 1
+	font-weight: normal
+	color: #323232
+	padding: 7px 4px
+
+.ui-datepicker td
+	padding: 0
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+	font-family: $GraphikLCG
+	font-size: 14px
+	line-height: 1
+	padding: 7px 5px
+	border: none
+	background-color: transparent
+	text-align: center
+
+.ui-state-active, .ui-widget-content .ui-state-active
+	background: #0B7CC1
+	color: #fff
+
+@media only screen and (max-width : 1000px)
+	.main
+		&-block
+			padding: 30px 17px 25px
+		&-col
+			&-big
+				max-width: 300px
+
+@media only screen and (max-width : 940px)
+	.main
+		&-wrap
+			max-width: 600px
+			margin: 0 auto
+		&-row
+			flex-flow: row wrap
+			padding: 0
+		&-col
+			max-width: 100%
+			width: 100%
+			padding-bottom: 20px
+			&-small
+				min-width: auto
+				width: 50%
+		&-buttons
+			max-width: 100%
+			width: 100%
+			padding: 0
+			text-align: center
+
+@media only screen and (max-width : 768px)
+	.main
+		padding-top: 102px
+		margin-bottom: 40px
+		&-top
+			height: 218px
+		&-title
+			font-size: 20px
+			line-height: 55px
+			margin-bottom: 5px
+		&-wrap
+			.tab-list li a
+				font-size: 16px
+				line-height: 24px
+
+@media only screen and (max-width : 370px)
+	.main
+		&-wrap
+			.tab-list li a
+				font-size: 14px
+				line-height: 20px
+				padding-left: 5px
+				padding-right: 5px
+		&-block
+			padding: 30px 10px 25px

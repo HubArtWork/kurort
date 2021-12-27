@@ -1,0 +1,79 @@
+@import "vars"
+
+.subscription
+	margin-bottom: 100px
+	&-wrap
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		padding: 63px 116px 87px
+	&-title
+		display: block
+		max-width: 580px
+		font-size: 35px
+		line-height: 48px
+		font-weight: 600
+		color: #fff
+		margin: 0 0 13px
+	p
+		font-size: 20px
+		line-height: 1.2
+		color: #EFEFEF
+		margin-bottom: 47px
+	&-form
+		max-width: 1060px
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		.input-block
+			width: 100%
+			margin: 0 23px 0 0
+			input
+				background: rgba(255, 255, 255, 0.3)
+				border-radius: 2px
+				border: 1px solid #fff
+				padding: 0 19px
+				font-size: 16px
+				color: #fff
+				transition: $transition
+				&::-webkit-input-placeholder
+					color: rgba(#fff, 1)
+				&:-moz-placeholder
+					color: rgba(#fff, 1)
+				&::-moz-placeholder
+					color: rgba(#fff, 1)
+				&:-ms-input-placeholder
+					color: rgba(#fff, 1)
+				&:focus
+					background: rgba(255, 255, 255, 0.5)
+					border: 2px solid #fff
+		.primary-btn
+			min-width: 194px
+
+@media only screen and (max-width : 1000px)
+	.subscription
+		margin-bottom: 70px
+		&-wrap
+			padding: 50px
+
+@media only screen and (max-width : 768px)
+	.subscription
+		&-wrap
+			padding: 30px 23px 47px
+			p
+				font-size: 16px
+				line-height: 22px
+				margin-bottom: 26px
+		&-title
+			font-size: 25px
+			line-height: 35px
+			margin-bottom: 6px
+		&-form
+			display: block
+			max-width: 500px
+			.input-block
+				margin-bottom: 20px
+			.primary-btn
+				display: block
+				width: 100%
+				min-width: auto

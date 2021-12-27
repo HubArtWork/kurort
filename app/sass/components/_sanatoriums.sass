@@ -1,0 +1,222 @@
+@import "vars"
+
+.map
+	height: 922px
+	overflow: hidden
+	position: relative
+	&-wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.sanatoriums
+	margin-bottom: 82px
+	.section-top
+		margin-bottom: 40px
+	&-head
+		&-mob
+			display: none
+		.tab-list
+			display: flex
+			flex-flow: row nowrap
+			border-bottom: 3px solid #CECECE
+			margin-bottom: 30px
+			position: relative
+			li
+				a
+					display: inline-block
+					padding: 0 50px
+					font-size: 20px
+					line-height: 54px
+					font-weight: 500
+					color: #13130A
+					position: relative
+					text-transform: uppercase
+					&::after
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						width: 100%
+						height: 3px
+						background: #160E44
+						opacity: 0
+						z-index: 10
+						transition: $transition
+					&.active
+						&::after
+							opacity: 1
+					&.local-map
+						position: absolute
+						right: 0
+						top: 0
+						padding: 0 0 0 52px
+						font-size: 16px
+						font-weight: normal
+						text-transform: none
+						&::before
+							content: ''
+							position: absolute
+							top: 45%
+							left: 25px
+							transform: translate(0,-50%)
+							width: 16px
+							height: 16px
+							background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99985 0C5.0591 0 2.6665 2.39259 2.6665 5.33334C2.6665 6.21616 2.88722 7.09147 3.30682 7.86784L7.70819 15.8281C7.76679 15.9342 7.87844 16 7.99985 16C8.12125 16 8.23291 15.9342 8.2915 15.8281L12.6945 7.86522C13.1125 7.09147 13.3332 6.21613 13.3332 5.33331C13.3332 2.39259 10.9406 0 7.99985 0ZM7.99985 8C6.52947 8 5.33319 6.80372 5.33319 5.33334C5.33319 3.86297 6.52947 2.66669 7.99985 2.66669C9.47022 2.66669 10.6665 3.86297 10.6665 5.33334C10.6665 6.80372 9.47022 8 7.99985 8Z' fill='%230B7CC1'/%3E%3C/svg%3E%0A")
+							background-repeat: no-repeat
+							background-position: center
+							background-size: contain
+	.swiper-wrapper
+		display: flex
+		flex-flow: row wrap
+		width: auto
+		height: auto
+		margin: 0 -10px
+	&-slider
+		overflow: visible
+	&-slide
+		width: 33.333%
+		height: auto
+		.post
+			width: 100%
+			height: 100%
+			&-wrap
+				height: 100%
+				background-color: #fff
+				box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07)
+				padding: 16px 16px 21px
+			&-info
+				padding: 20px 8px 0
+				p
+					height: 66px
+					margin: 0
+			&-grade
+				top: 31px
+				left: 16px
+			&-img
+				padding-bottom: 55.96107055961071%
+			&-review
+				bottom: 0
+
+@media only screen and (max-width : 1240px)
+	.sanatoriums
+		&-head .tab-list li a
+			font-size: 18px
+			line-height: 50px
+			padding: 0 20px
+
+@media only screen and (max-width : 1000px)
+	.sanatoriums
+		&-head .tab-list li a
+			font-size: 14px
+			line-height: 44px
+			padding: 0 12px
+		&-slide
+			width: 50%
+
+@media only screen and (max-width : 768px)
+	.map
+		height: 400px
+		margin-bottom: 63px
+	.sanatoriums
+		.section
+			&-top,&-mob
+				padding: 0 10px
+			&-top
+				margin-bottom: 20px
+		.wrapper
+			padding: 0
+		&-head
+			padding: 0 10px
+			margin-bottom: 20px
+			&-wrap
+				position: relative
+				&.active
+					.sanatoriums-head-mob
+						border-radius: 2px 2px 0 0
+						&::after
+							transform: translate(0,-50%) rotate(180deg)
+					.tab-list
+						opacity: 1
+						visibility: visible
+			&-mob
+				display: block
+				cursor: pointer
+				font-size: 16px
+				line-height: 24px
+				border: 1px solid rgba(46, 46, 46, 0.2)
+				padding: 13px 15px
+				position: relative
+				border-radius: 2px
+				background-color: #fff
+				&::after
+					content: ''
+					position: absolute
+					top: 50%
+					right: 14px
+					transform: translate(0,-50%)
+					width: 8px
+					height: 7px
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.99309 6.95337L7.4512 0.988342H0.534972L3.99309 6.95337Z' fill='%23160E44'/%3E%3C/svg%3E%0A")
+					background-repeat: no-repeat
+					background-position: center
+					background-size: contain
+					transition: $transition
+			.tab-list
+				display: block
+				border: none
+				margin: 0
+				border: 1px solid rgba(46, 46, 46, 0.2)
+				border-top: none
+				position: absolute
+				top: 100%
+				left: 0
+				width: 100%
+				z-index: 40
+				background-color: #fff
+				opacity: 0
+				visibility: hidden
+				transition: $transition
+				li
+					a
+						display: block
+						font-size: 16px
+						line-height: 24px
+						padding: 5px 10px
+						text-transform: none
+						font-weight: normal
+						&::after
+							display: none
+						&.local-map
+							position: static
+							font-size: 16px
+							line-height: 24px
+							font-weight: normal
+							padding: 5px 10px
+							&::before
+								display: none
+						&.active
+							color: $colorAccent
+		.swiper-wrapper
+			display: flex
+			flex-flow: row nowrap
+			width: 100%
+			height: 100%
+			margin: 0
+		&-slider
+			padding: 0 10px 63px
+			.swiper-pagination
+				display: block!important
+				bottom: 15px
+		&-slide
+			width: 100%
+			.post
+				padding: 0
+				&-wrap
+					padding: 16px 15px 21px
+				&-info
+					padding: 0
+				&-img
+					margin-bottom: 20px

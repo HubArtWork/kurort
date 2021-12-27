@@ -1,0 +1,61 @@
+@import "vars"
+
+.advantage
+	&-wrap
+		padding: 100px 0 80px
+		position: relative
+	&-bg
+		position: absolute
+		top: 90px
+		left: 50%
+		transform: translate(-50%,0)
+		min-width: 1361px
+		img,svg
+			display: block
+	&-row
+		position: relative
+		z-index: 10
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -15px
+	&-col
+		width: 16.666%
+		padding: 0 15px 20px
+		text-align: center
+	&-ico
+		padding-bottom: 25px
+		img,svg
+			display: block
+			margin: 0 auto
+	&-title
+		display: block
+		font-size: 20px
+		line-height: 1.2
+		font-weight: 600
+		margin: 0 0 15px
+
+@media only screen and (max-width : 1000px)
+	.advantage
+		&-bg
+			display: none
+		&-col
+			width: 33.333%
+
+@media only screen and (max-width : 768px)
+	.advantage
+		&-wrap
+			padding: 0 0 20px
+		&-col
+			width: 50%
+			padding-bottom: 20px
+			p
+				font-size: 14px
+				line-height: 20px
+		&-ico
+			padding-bottom: 18px
+			img,svg
+				max-width: 77px
+		&-title
+			font-size: 16px
+			line-height: 1.5
+			margin-bottom: 3px

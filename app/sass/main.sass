@@ -1,0 +1,208 @@
+@import "libs"
+@import "vars"
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Graphik LCG', normal, 900, '../fonts/GraphikLCG-Black.woff2')
+@include font('Graphik LCG', normal, 700, '../fonts/GraphikLCG-Bold.woff2')
+@include font('Graphik LCG', normal, 600, '../fonts/GraphikLCG-Semibold.woff2')
+@include font('Graphik LCG', normal, 500, '../fonts/GraphikLCG-Medium.woff2')
+@include font('Graphik LCG', normal, 400, '../fonts/GraphikLCG-Regular.woff2')
+@include font('Graphik LCG', normal, 300, '../fonts/GraphikLCG-Light.woff2')
+@include font('Graphik LCG', normal, 200, '../fonts/GraphikLCG-Extralight.woff2')
+@include font('Graphik LCG', normal, 100, '../fonts/GraphikLCG-Thin.woff2')
+
+*::-webkit-input-placeholder
+	color: rgba(#323232, 1)
+
+*:-moz-placeholder
+	color: rgba(#323232, 1)
+
+*::-moz-placeholder
+	color: rgba(#323232, 1)
+
+*:-ms-input-placeholder
+	color: rgba(#323232, 1)
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+a, a:hover, a:focus, a:active, a:visited
+	text-decoration: none
+	transition: $transition
+
+ul,ol 
+	list-style: none
+
+html,body
+	//height: 100%
+	overflow-x: hidden
+	&.scroll-hidden
+		overflow: hidden
+
+body
+	font-family: $GraphikLCG
+	font-size: 14px
+	line-height: 1.57142
+	color: #323232
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	position: relative
+	display: flex
+	flex-direction: column
+	padding-top: 224px
+
+img
+	max-width: 100%
+	height: auto
+
+input,textarea,select,button
+	font-family: $GraphikLCG
+	appearance: none
+	box-shadow: none
+
+button
+	cursor: pointer
+	transition: $transition
+	border: none
+	background: transparent
+
+.wrapper
+	max-width: 1430px
+	margin: 0 auto
+	padding: 0 30px
+
+.swiper-container
+	width: 100%
+	height: 100%
+
+.section
+	&-top
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		position: relative
+		margin: 0 0 50px
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #CECECE
+	&-title
+		display: block
+		font-size: 35px
+		line-height: 55px
+		font-weight: bold
+		text-transform: uppercase
+		padding-right: 20px
+		background-color: #fff
+		position: relative
+		z-index: 10
+		margin: 0
+	&-button
+		padding-left: 20px
+		background-color: #fff
+		position: relative
+		z-index: 10
+		.second-btn
+			min-width: 276px
+	&-mob
+		display: none
+		text-align: center
+
+.swiper-button-next,.swiper-button-prev
+	top: 50%
+	transform: translate(0,-50%)
+	margin: 0
+	width: 50px
+	height: 50px
+	background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='24.5' stroke='%23454545'/%3E%3Cpath d='M37.3536 25.0355C37.5488 24.8403 37.5488 24.5237 37.3536 24.3284L34.1716 21.1464C33.9763 20.9512 33.6597 20.9512 33.4645 21.1464C33.2692 21.3417 33.2692 21.6583 33.4645 21.8536L36.2929 24.682L33.4645 27.5104C33.2692 27.7057 33.2692 28.0223 33.4645 28.2175C33.6597 28.4128 33.9763 28.4128 34.1716 28.2175L37.3536 25.0355ZM12 25.182L37 25.182V24.182L12 24.182V25.182Z' fill='%23454545'/%3E%3C/svg%3E%0A")
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	z-index: 50
+	&::after
+		display: none
+
+.swiper-button-prev
+	left: 0
+	transform: translate(0,-50%) rotate(180deg)
+
+.swiper-button-next
+	right: 0
+
+.swiper-pagination
+	bottom: 0
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 7px
+
+.swiper-pagination-bullet
+	width: 10px
+	height: 10px
+	background: none
+	border: 1px solid #323232
+	border-radius: 50%
+	padding: 0
+	&.swiper-pagination-bullet-active
+		background: #323232
+
+@media only screen and (max-width : 1000px)
+	body
+		padding-top: 119px
+	.wrapper
+		padding: 0 20px
+
+@media only screen and (max-width : 768px)
+	.wrapper
+		padding: 0 10px
+	.section
+		&-top
+			margin-bottom: 20px
+			&::after
+				display: none
+		&-title
+			font-size: 25px
+			line-height: 35px
+			padding: 0
+		&-button
+			display: none
+		&-mob
+			display: block
+			.primary-btn,.second-btn
+				max-width: 400px
+				width: 100%
+
+@import "components/general/icons"
+@import "components/general/buttons"
+@import "components/general/inputs-selects-check"
+@import "components/general/modals"
+@import "components/header"
+@import "components/main"
+@import "components/advantage"
+@import "components/stock"
+@import "components/popular"
+@import "components/sanatoriums"
+@import "components/testimonials"
+@import "components/blog"
+@import "components/subscription"
+@import "components/footer"
+
+.tab
+	display: none
+	&.tab-active
+		display: block
+		

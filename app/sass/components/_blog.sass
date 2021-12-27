@@ -1,0 +1,77 @@
+@import "vars"
+
+.blog
+	background: #F8F8F8
+	padding: 70px 0 63px
+	margin-bottom: 80px
+	.section
+		&-top
+			margin-bottom: 44px
+		&-title,&-button
+			background-color: #F8F8F8
+	&-wrap
+		p
+			min-height: 88px
+			overflow: hidden
+			margin-bottom: 20px
+	&-img
+		padding-bottom: 52.278820375335116%
+		position: relative
+		overflow: hidden
+		margin-bottom: 16px
+		&-wrap
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 100%
+			height: 100%
+			background-repeat: no-repeat
+			background-position: center
+			background-size: cover
+			transition: $transition
+	.date
+		margin-bottom: 10px
+	&-title
+		display: block
+		font-size: 20px
+		line-height: 1.2
+		font-weight: 600
+		color: #323232
+		margin: 0 0 15px
+		a
+			color: #323232
+	&-all
+		padding: 0 97px
+		position: relative
+		.swiper-button-next,.swiper-button-prev
+			top: 48%
+		.swiper-pagination
+			display: none!important
+
+@media only screen and (max-width : 768px)
+	.blog
+		padding: 30px 0
+		.section-top
+			margin-bottom: 20px
+		&-all
+			padding: 0
+			.swiper-button-next,.swiper-button-prev
+				display: none!important
+			.swiper-pagination
+				display: block!important
+				bottom: 15px
+		&-slider
+			padding-bottom: 70px
+		&-wrap
+			.date
+				margin-bottom: 10px
+			p
+				min-height: 66px
+				margin-bottom: 20px
+		&-img
+			min-height: 195px
+		&-title
+			font-size: 16px
+			line-height: 1.5
+			margin-bottom: 10px

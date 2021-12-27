@@ -1,0 +1,184 @@
+@import "vars"
+
+.footer
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	padding: 60px 0 80px
+	.wrapper,&-row,&-list,&-menu,&-actions,&-social
+		display: flex
+		flex-flow: row nowrap
+	.wrapper
+		justify-content: space-between
+	&-row
+		position: relative
+	&-main
+		padding-top: 13px
+		position: relative
+		p
+			font-size: 13px
+			line-height: 1
+			padding-bottom: 15px
+	&-menu
+		padding-top: 16px
+		position: absolute
+		top: 0
+		left: 100%
+		&-list
+			padding-left: 111px
+			li
+				padding-bottom: 4px
+				a
+					display: inline-block
+					white-space: nowrap
+					font-size: 15px
+					line-height: 1
+					font-weight: 500
+					color: #3E3E3E
+					&:hover
+						color: $colorAccent
+	&-logo
+		margin-bottom: 26px
+		img,svg
+			display: block
+			max-width: 189px
+	&-list
+		display: flex
+		flex-flow: row nowrap
+		margin: 0 -14px 22px
+		li
+			padding: 0 14px
+	&-links
+		li
+			padding-bottom: 5px
+			a
+				font-size: 14px
+				line-height: 1
+				color: $colorAccent
+				&:hover
+					text-decoration: underline
+	&-block
+		text-align: right
+		p
+			font-size: 14px
+			line-height: 1
+			padding-bottom: 12px
+			a
+				color: #323232
+	&-actions
+		align-items: center
+		padding-bottom: 25px
+		.primary-btn
+			min-width: 223px
+	&-link
+		white-space: nowrap
+		display: inline-block
+		padding-left: 33px
+		position: relative
+		font-size: 14px
+		line-height: 22px
+		font-weight: 600
+		color: #323232
+		margin-right: 46px
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			width: 22px
+			height: 22px
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.66659 3.66667H18.3333C19.3416 3.66667 20.1666 4.49167 20.1666 5.5V16.5C20.1666 17.5083 19.3416 18.3333 18.3333 18.3333H3.66659C2.65825 18.3333 1.83325 17.5083 1.83325 16.5V5.5C1.83325 4.49167 2.65825 3.66667 3.66659 3.66667Z' stroke='%230B7CC1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.1666 5.5L10.9999 11.9167L1.83325 5.5' stroke='%230B7CC1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+	&-social
+		justify-content: flex-end
+		padding-bottom: 60px
+		li
+			padding-left: 9px
+			img,svg
+				display: block
+
+@media only screen and (max-width : 1160px)
+	.footer
+		&-menu-list
+			padding-left: 40px
+		&-link
+			margin-right: 30px
+
+@media only screen and (max-width : 1000px)
+	.footer
+		&-row
+			display: block
+		&-menu
+			position: static
+			margin: 0 -10px 23px
+			&-list
+				width: 50%
+				padding: 0 10px
+
+@media only screen and (max-width : 768px)
+	.footer
+		padding: 30px 0 0
+		position: relative
+		overflow: hidden
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 740px
+			background: linear-gradient(180deg, #ECECEC 1.53%, rgba(232, 232, 232, 0.39) 47.45%, #FFFFFF 100%)
+		.wrapper,&-actions
+			display: block
+		.wrapper
+			position: relative
+			z-index: 10
+			padding-bottom: 267px
+		&-main
+			padding: 0
+		&-main,&-row
+			position: static
+		&-logo
+			margin-bottom: 20px
+		&-menu
+			padding: 0
+			&-list li a
+				font-size: 14px
+				line-height: 18px
+		&-block
+			text-align: left
+		&-actions
+			max-width: 300px
+			padding-bottom: 30px
+		&-link
+			margin: 0 0 25px
+		&-social
+			justify-content: flex-start
+			padding-bottom: 0
+			li
+				padding: 0 9px 0 0
+		&-info
+			position: absolute
+			bottom: 106px
+			left: 0
+			width: 100%
+			padding: 0 10px
+		&-links
+			li
+				align-self: 13px
+				line-height: 1
+		&-text
+			width: 100%
+			position: absolute
+			bottom: 46px
+			left: 0
+			padding: 0 10px
+			p
+				font-size: 13px
+				line-height: 1
+				padding-bottom: 13px
+				&:last-child
+					padding-bottom: 0

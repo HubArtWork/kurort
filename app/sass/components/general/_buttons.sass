@@ -1,0 +1,80 @@
+@import "vars"
+
+.primary-btn,.second-btn
+	display: inline-block
+	text-align: center
+	font-size: 16px
+	line-height: 18px
+	font-weight: bold
+	border: 1px solid $colorAccent
+	padding: 15px 39px
+	border-radius: 2px
+	white-space: nowrap
+	&:disabled
+		cursor: not-allowed
+
+.primary-btn
+	background-color: $colorAccent
+	color: #fff
+	&:hover
+		background-color: transparent
+		color: $colorAccent
+	&-white
+		background-color: #fff
+		border-color: #fff
+		color: $colorMain
+		&:hover
+			background-color: $colorMain
+			border-color: $colorMain
+			color: #fff
+
+.second-btn
+	color: $colorAccent
+	&:hover
+		background-color: $colorAccent
+		color: #fff
+
+.more
+	display: inline-block
+	padding-right: 50px
+	font-size: 16px
+	line-height: 1.5
+	font-weight: 500
+	color: $colorAccent
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translate(0,-50%)
+		width: 26px
+		height: 9px
+		background-image: url("data:image/svg+xml,%3Csvg width='26' height='9' viewBox='0 0 26 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.8174 4.97147C26.0162 4.7759 26.0162 4.45883 25.8174 4.26327L22.5772 1.07636C22.3783 0.880796 22.0559 0.880796 21.8572 1.07636C21.6583 1.27193 21.6583 1.589 21.8572 1.78456L24.7373 4.61737L21.8572 7.45018C21.6583 7.64574 21.6583 7.96281 21.8572 8.15837C22.0559 8.35395 22.3783 8.35395 22.5772 8.15837L25.8174 4.97147ZM0 5.11814H25.4573V4.1166H0V5.11814Z' fill='%2358AA47'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+	&:hover
+		text-decoration: underline
+
+.link
+	display: inline-block
+	font-size: 16px
+	line-height: 1.5
+	font-weight: 500
+	color: $colorAccent
+	padding-right: 25px
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translate(0,-50%)
+		width: 8px
+		height: 11px
+		background-image: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.33371 10.8174C3.52927 11.0162 3.84634 11.0162 4.0419 10.8174L7.22881 7.57719C7.42438 7.37832 7.42438 7.05592 7.22881 6.85715C7.03325 6.65828 6.71618 6.65828 6.52062 6.85715L3.68781 9.73729L0.854995 6.85715C0.659433 6.65828 0.342363 6.65828 0.146801 6.85715C-0.0487717 7.05592 -0.0487717 7.37832 0.146801 7.57719L3.33371 10.8174ZM3.18703 -1.83083e-07L3.18703 10.4573L4.18858 10.4573L4.18858 -1.39304e-07L3.18703 -1.83083e-07Z' fill='%2358AA47'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		transition: $transition

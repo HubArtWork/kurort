@@ -1,0 +1,331 @@
+@import "vars"
+
+.header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 1000
+	&-top
+		background: #F8F8F8
+		padding: 8px 0 8px
+		.wrapper
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+		p
+			font-size: 14px
+			line-height: 22px
+			color: #323232
+	&-selects
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		&-col
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			padding-left: 39px
+			label
+				font-size: 14px
+				line-height: 22px
+				white-space: nowrap
+				margin-right: 8px
+			.select2
+				min-width: 63px
+				width: 63px
+	&-middle
+		padding: 36px 0 27px
+		.wrapper
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+	&-logo
+		img,svg
+			display: block
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		.primary-btn
+			min-width: 223px
+			margin-left: 40px
+	&-social
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		li
+			padding-left: 28px
+	&-link
+		white-space: nowrap
+		display: inline-block
+		padding-left: 33px
+		position: relative
+		font-size: 16px
+		line-height: 22px
+		font-weight: 600
+		color: #323232
+		margin-left: 62px
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0,-50%)
+			width: 22px
+			height: 22px
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.66659 3.66667H18.3333C19.3416 3.66667 20.1666 4.49167 20.1666 5.5V16.5C20.1666 17.5083 19.3416 18.3333 18.3333 18.3333H3.66659C2.65825 18.3333 1.83325 17.5083 1.83325 16.5V5.5C1.83325 4.49167 2.65825 3.66667 3.66659 3.66667Z' stroke='%230B7CC1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.1666 5.5L10.9999 11.9167L1.83325 5.5' stroke='%230B7CC1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+	&-phone
+		display: none
+	&-bottom
+	&-menu
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		padding-right: 50px
+		border-top: 1px solid #D0D0D0
+		li
+			a
+				&.header-ml
+					display: block
+					font-size: 18px
+					line-height: 24px
+					text-transform: uppercase
+					color: #323232
+					padding: 19px
+			&.drop
+				min-width: 263px
+				width: 263px
+				position: relative
+				&.active
+					.drop-wrap
+						opacity: 1
+						visibility: visible
+				.drop
+					&-top
+						display: block
+						background: #160E44
+						font-size: 18px
+						line-height: 24px
+						font-weight: 500
+						color: #fff
+						padding: 19.5px 12px 19.5px 45px
+						position: relative
+						cursor: pointer
+						text-transform: uppercase
+						text-align: center
+						&::after
+							content: ''
+							position: absolute
+							top: 50%
+							left: 68px
+							transform: translate(0,-50%)
+							width: 20px
+							height: 14px
+							background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='20' y1='1' x2='-1.16564e-07' y2='0.999999' stroke='white' stroke-width='2'/%3E%3Cline x1='20' y1='7' x2='-1.16564e-07' y2='7' stroke='white' stroke-width='2'/%3E%3Cline x1='20' y1='13' x2='-1.16564e-07' y2='13' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+							background-repeat: no-repeat
+							background-position: center
+							background-size: contain
+					&-wrap
+						position: absolute
+						top: 100%
+						left: 0
+						min-width: 757px
+						z-index: 100
+						opacity: 0
+						visibility: hidden
+						transition: $transition
+					&-list
+						width: 354px
+						background: #F8F8F8
+						position: relative
+						li.drop-li
+							border-bottom: 1px solid #CECECE
+							&:last-child
+								border: none
+							&:hover
+								.drop-block
+									opacity: 1
+									visibility: visible
+						a.drop-link
+							display: flex
+							flex-flow: row nowrap
+							align-items: center
+							padding: 14px 26px
+							font-size: 20px
+							line-height: 1.2
+							font-weight: normal
+							color: #323232
+							img,svg
+								display: block
+								min-width: 35px
+								margin-right: 17px
+							&:hover
+								background: #F2F2F2
+						.drop-block
+							position: absolute
+							top: 0
+							left: 100%
+							background: #F2F2F2
+							padding: 20px 34px
+							min-width: 403px
+							opacity: 0
+							visibility: hidden
+							ul
+								li
+									padding-bottom: 23px
+									&:last-child
+										padding-bottom: 0
+									a
+										display: inline-block
+										padding-left: 27px
+										position: relative
+										font-size: 16px
+										line-height: 1
+										color: #0B7CC1
+										&::before
+											content: ''
+											position: absolute
+											top: 45%
+											left: 0
+											transform: translate(0,-50%)
+											width: 16px
+											height: 16px
+											background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.99985 0C5.0591 0 2.6665 2.39259 2.6665 5.33334C2.6665 6.21616 2.88722 7.09147 3.30682 7.86784L7.70819 15.8281C7.76679 15.9342 7.87844 16 7.99985 16C8.12125 16 8.23291 15.9342 8.2915 15.8281L12.6945 7.86522C13.1125 7.09147 13.3332 6.21613 13.3332 5.33331C13.3332 2.39259 10.9406 0 7.99985 0ZM7.99985 8C6.52947 8 5.33319 6.80372 5.33319 5.33334C5.33319 3.86297 6.52947 2.66669 7.99985 2.66669C9.47022 2.66669 10.6665 3.86297 10.6665 5.33334C10.6665 6.80372 9.47022 8 7.99985 8Z' fill='%230B7CC1'/%3E%3C/svg%3E%0A")
+											background-repeat: no-repeat
+											background-position: center
+											background-size: contain
+										span
+											display: inline-block
+											margin-left: 10px
+											font-size: 12px
+											line-height: 1
+											color: #323232
+											padding: 2px 6px
+											background-color: #fff
+											border-radius: 100px
+	&-bar
+		display: none
+
+#select2-price-results,#select2-lang-results
+	padding: 10px
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		min-width: 63px
+		width: 63px
+	.select2-results__options
+		padding: 10px
+	.select2-results__option
+		padding: 10px 0
+		font-size: 14px
+		&::before
+			display: none!important
+
+@media only screen and (max-width : 1160px)
+	.header
+		&-row
+			.primary-btn
+				margin-left: 30px
+
+@media only screen and (max-width : 1000px)
+	.header
+		background-color: #fff
+		&-top
+			padding: 6px 0
+			.wrapper
+				justify-content: center
+			p
+				display: none
+		&-selects
+			margin: 0 -9px
+			&-col
+				padding: 0 9px
+		&-middle
+			padding: 20.5px 0
+			.wrapper
+				justify-content: center
+				position: relative
+		&-row
+			display: none
+			padding: 22px 0 19px
+		&-logo
+			img,svg
+				max-height: 37px
+		&-bar,&-phone
+			display: block
+			cursor: pointer
+			position: absolute
+			top: 50%
+			transform: translate(0,-50%)
+			width: 42px
+			height: 38px
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+		&-bar
+			left: 20px
+			background-image: url("data:image/svg+xml,%3Csvg width='42' height='38' viewBox='0 0 42 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='42' height='38' rx='3' fill='%23160E44'/%3E%3Cline x1='31' y1='13' x2='11' y2='13' stroke='white' stroke-width='2'/%3E%3Cline x1='31' y1='19' x2='11' y2='19' stroke='white' stroke-width='2'/%3E%3Cline x1='31' y1='25' x2='11' y2='25' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+		&-phone
+			right: 20px
+			background-image: url("data:image/svg+xml,%3Csvg width='42' height='38' viewBox='0 0 42 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='42' height='38' rx='3' fill='%2358AA47'/%3E%3Cpath d='M23.1279 13.0077C23.968 13.1707 24.74 13.5792 25.3453 14.1809C25.9505 14.7826 26.3614 15.5501 26.5253 16.3853M23.1279 9.5874C24.8733 9.78017 26.5008 10.5572 27.7433 11.791C28.9859 13.0247 29.7695 14.6418 29.9656 16.3768M29.1055 23.2004V25.7656C29.1065 26.0038 29.0574 26.2395 28.9615 26.4577C28.8655 26.6759 28.7248 26.8718 28.5482 27.0328C28.3717 27.1938 28.1634 27.3163 27.9364 27.3926C27.7095 27.4689 27.4691 27.4972 27.2305 27.4758C24.5839 27.1899 22.0416 26.2908 19.808 24.8507C17.7299 23.5378 15.968 21.7862 14.6474 19.7202C13.1939 17.4894 12.2893 14.9496 12.007 12.3066C11.9855 12.0701 12.0138 11.8318 12.09 11.6068C12.1662 11.3818 12.2887 11.175 12.4497 10.9997C12.6107 10.8243 12.8067 10.6842 13.0251 10.5883C13.2436 10.4924 13.4797 10.4427 13.7186 10.4425H16.2988C16.7162 10.4384 17.1209 10.5854 17.4374 10.856C17.7539 11.1265 17.9606 11.5023 18.019 11.9132C18.1279 12.7342 18.3299 13.5402 18.6211 14.316C18.7368 14.6221 18.7618 14.9547 18.6932 15.2745C18.6246 15.5943 18.4653 15.8878 18.234 16.1203L17.1417 17.2062C18.3661 19.347 20.149 21.1195 22.3022 22.3367L23.3945 21.2508C23.6284 21.0209 23.9236 20.8624 24.2453 20.7942C24.5669 20.726 24.9015 20.7509 25.2093 20.866C25.9897 21.1555 26.8004 21.3563 27.6262 21.4646C28.044 21.5232 28.4255 21.7324 28.6983 22.0524C28.9711 22.3725 29.116 22.781 29.1055 23.2004Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+		&-menu
+			display: block
+			position: absolute
+			top: 100%
+			left: 3%
+			width: 94%
+			background: #F8F8F8
+			box-shadow: 0px 4px 18px rgba(25, 55, 83, 0.4)
+			padding: 0
+			opacity: 0
+			visibility: hidden
+			transition: $transition
+			li
+				border-bottom: 1px solid #D0D0D0
+				&:last-child
+					border: none
+				&.drop
+					min-width: auto
+					width: 100%
+					max-width: 100%
+					.drop
+						&-top
+							padding: 15px
+							&::after
+								display: none
+						&-wrap
+							display: none
+				a
+					&.header-ml
+						display: block
+						text-align: center
+						padding: 15px
+						line-height: 24px
+		&.header-active
+			.header
+				&-bar
+					background-image: url("data:image/svg+xml,%3Csvg width='42' height='38' viewBox='0 0 42 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3C0 1.34315 1.34315 0 3 0H39C40.6569 0 42 1.34315 42 3V38H0V3Z' fill='%23160E44'/%3E%3Cline x1='28.8494' y1='10.7071' x2='14.7073' y2='24.8492' stroke='white' stroke-width='2'/%3E%3Cline x1='28.5773' y1='24.92' x2='14.4352' y2='10.7779' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A")
+				&-menu
+					opacity: 1
+					visibility: visible
+
+@media only screen and (max-width : 768px)
+	.header
+		&-bar
+			left: 10px
+		&-phone
+			right: 10px
+
+@media only screen and (max-width : 370px)
+	.header
+		&-selects
+			margin: 0 -5px
+			&-col
+				padding: 0 5px
+				label
+					font-size: 12px
